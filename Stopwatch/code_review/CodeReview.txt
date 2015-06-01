@@ -1,0 +1,58 @@
+Please enter your code review in this file as plain text
+and make sure to include it when you commit your project.
+
+AddressBook.java--------------
+line 23: First line in javadoc of the class does not provide any meaningful 
+         information.
+
+line 44: The constructor throws an IllegalArgumentException but it is neither
+         documented in javadoc nor caught and handled.
+         
+line 56: Prefer not return 0 on success. 
+
+line 60: javadoc description should have proper punctuation.
+
+line 66: Seems to be trying to adhere to 80 chars per line but this line is 81 
+         chars. Thrown exception is not documented in javadoc.
+
+line 74: The check is unnecessary. The following for loop would never get 
+         executed if Contacts.size is 0 anyway.
+
+line 92: toString implementation only provides Contact names. 
+         Not a very good textual representation of an AddressBook.
+
+line 120: this.search(keyWord) is not assigned to a reference, so the user 
+          cannot use the results. Also, the Vector of Contacts returned by 
+          search has different indexes than Vector of Contacts in AddressBook, 
+          so the search does not provide any useful information to deleteEntry.
+
+line 136: Prefer to log the error rather than return -1.
+ 
+line 146: Details should be documented in javadoc.
+
+line 151: Incomplete comment.
+
+line 156: prefer not to return -1. Exception not documented in javadoc.
+
+line 160: Do not understand purpose of trying to delete file. 
+          It will only get there if the file does not exist.
+
+line 247: Details should be documented in javadoc.
+
+line 253: prefer not to return -1.
+
+line 261: exception not documented in javadoc.
+
+Contact.java------------------
+
+line 5: Does not provide meaningful description.
+
+line 7: use 3rd person in javadoc. 
+
+line 18: Make String fields final. (So that the references are immutable)
+
+line 26: prefer to initialize to null over empty String.
+
+line 49: Builder methods return Builder object, not the contact.
+
+line 128: prefer conventional naming for getter methods. (ie getPhoneNumber)

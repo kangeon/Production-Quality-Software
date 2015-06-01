@@ -1,0 +1,43 @@
+Please enter your code review in this file as plain text
+and make sure to include it when you commit your project.
+
+StopwatchFactory.java----------------------------------------------------------
+
+Line 36: Should be indented 2 spaces not tabbed.
+
+Line 37: Entire block is synchronized on a lock so there is no need to use a
+synchronized list and set.
+
+Line 38: Checking if Id is null or empty does not have to be in a 
+synchronized block
+
+Line 38-46: Code here is within the synchronized(lock) block, so it should be 
+indented.
+
+Line 55: Should be indented 2 spaces not tabbed.
+
+Line 56: Should be indented 2 spaces not tabbed.
+
+Line 56: The block is synchronized on a lock so there is no need for 
+synchronized list
+
+StopwatchImplementation.java---------------------------------------------------
+
+Line 63: Doesn't account for the time measured before the pause. Defeats 
+purpose of having pause.
+
+Line 78: Indent 2 spaces not tab.
+
+Line 79-81: Code is within the synchronized(lock) block, so it should be 
+indented.
+
+Line 119: Unnecessary reset of startTime.
+
+Line 133: Indent 2 spaces not tab.
+
+Line 145: hashcode doesn't need to be locked.
+
+Line 162: Unnecessary check if(obj == null)
+
+Line 169: Unnecessary check. Id will never be null because it is checked for in
+constructor.
